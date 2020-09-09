@@ -1,0 +1,53 @@
+<div className="row">
+                <div className="col-md-8 mb-3">
+                
+                {parse(room.description)}
+                    
+                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                        <ol className="carousel-indicators">
+                            {/* {% for image in ad.images %} */}
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{loop.index0}}"
+                                className="{% if loop.first %}active{% endif %}"></li>
+                            {/* {% endfor %} */}
+                        </ol>
+                        <div className="carousel-inner">
+                            {/* {% for image in ad.images %} */}
+                            {room.images.map((image, index) => (
+                                <div key={image.id} className={"carousel-item " + index === 0 ? "active" : ""}>
+                                    <img src={image.url} className="d-block w-100" alt={image.caption} />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <h5>{room.title}</h5>
+                                        <p>{image.caption}</p>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* {% endfor %} */}
+                        </div>
+                        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span className="carousel-control-prev-icon" carouselExampleIndicatorsaria-hidden="true"></span>
+                            <span className="sr-only">Previous</span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="row">
+                        <div className="col-md-4">
+                            <img src="http://placehold.it/64x64" alt="Avatar de maa" />
+                        </div>
+                        <div className="col">
+                            <h3>Axel Byte</h3>
+                            <span className="badge badge-info">3 annonces</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores numquam culpa aperiam similique
+                        officiis. Laboriosam ratione quos pariatur omnis fugiat?</p>
+                    <p>Sunt tenetur hic sit, dolore et harum sequi adipisci quae doloribus atque labore! Ad illo et sapiente
+                        nesciunt? Velit, impedit?</p>
+                    <p>Possimus dolore dolorum, et facere debitis omnis laborum, deserunt fugiat ut, mollitia dolores eum est
+                        quo ipsum quaerat neque minus?</p>
+                </div>
+            </div>

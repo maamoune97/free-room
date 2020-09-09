@@ -1,0 +1,9 @@
+
+.card-room{
+    width: 18rem;
+}
+.card-img-room{
+    height: 200px;
+    width: 100%;
+    display: block;
+}
